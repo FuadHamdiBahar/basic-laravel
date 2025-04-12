@@ -118,6 +118,10 @@
                                                                 </svg>
                                                             </a>
                                                         @endif
+
+                                                        @if ($t->dibayar == 1)
+                                                            <span class="badge text-bg-success">Dibayar</span>   
+                                                        @endif
                                                     @endif
                                                     @if ($t->dibayar == 0)
                                                         <a class="btn btn-small btn-warning"
