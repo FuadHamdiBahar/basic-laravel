@@ -35,6 +35,20 @@
                             </div>
                         </div>
                         <hr>
+                        <table class="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <td>Pesanan</td>
+                                    <td>Kuantitas</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Bakso Tenes</td>
+                                    <td>{{ $transaction->bakso_tenes }}</td>
+                                </tr>
+                            </tbody>
+                        </table>
                         <h4 class="fw-bold">Makanan</h4>
                         <div class="row">
                             <div class="col-xl-6">
