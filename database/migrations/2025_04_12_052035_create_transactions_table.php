@@ -39,6 +39,9 @@ return new class extends Migration
             $table->integer('kacang')->default(0)->nullable();
             $table->integer('rempeyek')->default(0)->nullable();
             $table->integer('jumlah')->default(0)->nullable();
+
+            $table->boolean('diantar')->default(false);
+            $table->boolean('dibayar')->default(false);
             
             $table->timestamps();
         });

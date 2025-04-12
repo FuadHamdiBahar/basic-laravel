@@ -14,16 +14,24 @@
 
     <!-- Nav Item - Dashboard -->
     <li class="nav-item active">
+        <a class="nav-link" href="/">
+            <i class="fas fa-fw fa-tachometer-alt"></i>
+            <span>Dashboard</span></a>
+    </li>
+
+    <li class="nav-item active">
         <a class="nav-link" href="/pos">
             <i class="fas fa-fw fa-tachometer-alt"></i>
             <span>POS</span></a>
     </li>
 
     <li class="nav-item active">
-        <a class="nav-link" href="/">
+        <a class="nav-link" href="/transaction">
             <i class="fas fa-fw fa-tachometer-alt"></i>
-            <span>Dashboard</span></a>
+            <span>Daftar Transaksi</span></a>
     </li>
+
+
 
     {{-- <!-- Divider -->
     <hr class="sidebar-divider">

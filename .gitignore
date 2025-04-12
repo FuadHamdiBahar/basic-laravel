@@ -35,3 +35,5 @@ skydash-v.01/
 boostrap
 
 resources/views/isi.blade.php
+
+app/Http/Controllers/UserController.php
