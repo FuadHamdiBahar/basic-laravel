@@ -8,6 +8,9 @@
                     <h6 class="m-0 font-weight-bold text-primary">Detail Transaksi</h6>
                 </div>
                 <div class="card-body">
+                    <div class="d-flex justify-content-center">
+                        <h4 class="ml-2" name="jumlah" id="jumlah">Rp. {{ number_format($transaction->jumlah) }}</h4>
+                    </div>
                     <form action="/api/transaction" method="post" id="addTransaction" name="addTransaction">
                         @method('put')
                         @csrf
@@ -289,7 +292,7 @@
                         </div>
 
                         <div class="row">
-                            <div class="col-xl-6">
+                            <div class="col-xl-12 d-flex justify-content-end">
                                 <button type="submit" class="btn btn-warning btn-icon-split">
                                     <span class="icon text-white-50">
                                         <i class="fas fa-flag"></i>
@@ -297,10 +300,6 @@
                                     <span class="text">Ubah Pesanan</span>
                                 </button>
                             </div>
-                            <div class="col-xl-6">
-                                <p name="jumlah" id="jumlah">Rp. {{ number_format($transaction->jumlah) }}</p>
-                            </div>
-
                         </div>
 
                     </form>
