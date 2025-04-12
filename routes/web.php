@@ -9,13 +9,16 @@ use App\Http\Controllers\ViewController;
 //     return view('welcome');
 // });
 
-Route::get('/', [ViewController::class, 'index']);
+Route::get('/', [ViewController::class, 'dashboard']);
 Route::get('/pos', [ViewController::class, 'posIndex'])->name('pos');
 Route::get('/transaction', [ViewController::class, 'listTransaction'])->name('listTransaction');
 Route::get('/transaction/{id}', [ViewController::class, 'detailTransaction']);
 Route::get('/transaction/update/{id}', [ViewController::class, 'updateTransaction']);
 
 Route::prefix('/api')->group(function(){
+    Route::get('/jumlah_transaksi', [TransactionController::class, 'jumlahTransaksi']);
+
+
     Route::get('/transaction', [TransactionController::class, 'allTransaction']);
     Route::post('/transaction', [TransactionController::class, 'createTransaction']);
     Route::put('/transaction', [TransactionController::class, 'updateTransaction']);

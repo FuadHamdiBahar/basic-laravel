@@ -4,9 +4,33 @@ namespace App\Http\Controllers;
 
 use App\Models\Transaction;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class TransactionController extends Controller
 {
+    public function jumlahTransaksi(){
+        $results = DB::select("select count(*) as jumlah_tranasaksi, raw.tanggal, sum(raw.jumlah) as total  from (
+                                    select DATE(created_at) as tanggal, jumlah from transactions
+                                ) raw group by raw.tanggal");
+
+        $n_transaksi = array();
+        $total_transaksi = array();
+        $labels = array();
+        
+
+        foreach ($results as $row) {
+            array_push($n_transaksi, $row->jumlah_tranasaksi);
+            array_push($labels, $row->tanggal);
+            array_push($total_transaksi, $row->total);
+        }
+
+        return [
+            'n_transaksi'=>$n_transaksi,
+            'labels'=>$labels,
+            'total_transaksi'=>$total_transaksi,
+        ];
+    }
+
     public function deleteTransaction(Request $request)
     {
         // return $request->id;

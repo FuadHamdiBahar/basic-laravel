@@ -6,21 +6,27 @@ use App\Models\Product;
 use App\Models\Transaction;
 use Illuminate\Http\Request;
 
+
 class ViewController extends Controller
 {
+    public function dashboard()
+    {
+        return view('dashboard');
+    }
 
     public function updateTransaction($id)
     {
         $transaction = Transaction::find($id);
         return view('transaction.update', [
-            'transaction' => $transaction
+            'transaction' => $transaction,
         ]);
     }
 
-    public function detailTransaction($id){
+    public function detailTransaction($id)
+    {
         $transaction = Transaction::find($id);
         return view('transaction.detail', [
-            'transaction' => $transaction
+            'transaction' => $transaction,
         ]);
     }
 
@@ -44,6 +50,4 @@ class ViewController extends Controller
     {
         return view('index');
     }
-
-
 }
