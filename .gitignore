@@ -28,3 +28,10 @@ Homestead.json
 .env.production
 .phpactor.json
 auth.json
+
+# custome
+skydash-v.01/
+
+boostrap
+
+resources/views/isi.blade.php
