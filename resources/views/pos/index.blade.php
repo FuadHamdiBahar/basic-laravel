@@ -286,7 +286,7 @@
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-xl-6">
+                            <div class="col-xl-12 d-flex justify-content-end">
                                 <button type="submit" class="btn btn-primary btn-icon-split">
                                     <span class="icon text-white-50">
                                         <i class="fas fa-flag"></i>
@@ -294,10 +294,6 @@
                                     <span class="text">Buat Pesanan</span>
                                 </button>
                             </div>
-                            <div class="col-xl-6">
-                                <p name="jumlah" id="jumlah">Rp. </p>
-                            </div>
-
                         </div>
                     </form>
                 </div>
